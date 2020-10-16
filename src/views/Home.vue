@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <img alt="Vue logo" src="../assets/logo.png" />
+  <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
+  <ModalButton />
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent, SetupContext } from "vue";
+import ModalButton from "@/components/ModalButton.vue";
+import router from "@/router";
+import store from "@/store";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld
-  }
+    // HelloWorld,
+    ModalButton,
+  },
+  setup(_, context: SetupContext) {
+    return {};
+  },
 });
 </script>
